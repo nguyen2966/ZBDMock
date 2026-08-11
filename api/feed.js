@@ -30,12 +30,6 @@ export default function handler(req, res) {
     generationId:
       `gen_${now.toISOString().replace(/\D/g, "").slice(0, 12)}`,
 
-    rankingExperimentId: "exp_feed_ranking_v1",
-
-    rankingVariantKey: "treatment_b",
-
-    rankingConfigVersion: 3,
-
     generatedAt: now.toISOString(),
 
     expiresAt: expiresAt.toISOString(),
@@ -45,7 +39,7 @@ export default function handler(req, res) {
       serverScore: Number(
         (8 + Math.random() * 2).toFixed(2)
       ),
-      video
+      video: video.video
     }))
   };
 
